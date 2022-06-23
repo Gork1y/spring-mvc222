@@ -40,10 +40,4 @@ public class CarsController {
         carDAO.save(car);
         return "redirect:/cars";
     }
-
-//    @GetMapping("/")
-//    public String someCars(@RequestParam(value = "count", required = false) int count, Model model) {
-//        model.addAttribute("carsSublist",carDAO.showSomeCars(count));
-//        return "cars/somecars";
-//    }
 }

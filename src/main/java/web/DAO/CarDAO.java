@@ -20,10 +20,6 @@ public class CarDAO {
         cars.add(new Car(++CAR_COUNT, "GAZ", "NEXT"));
     }
 
-//    public List<Car> index() {
-//        return cars;
-//    }
-
     public List<Car> index(int count) {
         List<Car> carsSublist = null;
         if (count < cars.size()) {
@@ -40,16 +36,6 @@ public class CarDAO {
                 .filter(car -> car.getId() == id)
                 .findAny().orElse(null);
     }
-
-//    public List<Car> showSomeCars(int count) {
-//        List<Car> carsSublist;
-//        if (count < cars.size()) {
-//            carsSublist = cars.subList(0, count);
-//        } else {
-//            carsSublist = cars;
-//        }
-//        return carsSublist;
-//    }
 
     public void save(Car car) {
         car.setId(++CAR_COUNT);
