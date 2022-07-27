@@ -4,12 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Start page</title>
+    <style>
+        .container-3 a {
+            position: relative;
+            text-decoration: none;
+            color: #337AB7;
+            display: inline-block;
+        }
+
+        .container-3 a::before,
+        .container-3 a::after {
+            content: '';
+            position: absolute;
+            transition: transform .5s ease;
+            left: -4px;
+            top: 0;
+            width: calc(100% + 8px);
+            height: 100%;
+            border-style: solid;
+            border-color: #337AB7;
+            box-sizing: border-box;
+        }
+
+        .container-3 a::before {
+            border-width: 1px 0 1px 0;
+            transform: scaleX(0);
+        }
+
+        .container-3 a::after {
+            border-width: 0 1px 0 1px;
+            transform: scaleY(0);
+        }
+
+        .container-3 a:hover::before,
+        .container-3 a:hover::after {
+            transform: scale(1, 1);
+        }
+    </style>
 </head>
 <body>
 <div>
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
+
+</div>
+<div class="container-3">
+    <h2>
+        <a href="/cars"> к машинам </a>
+    </h2>
 </div>
 </body>
 </html>

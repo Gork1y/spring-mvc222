@@ -13,11 +13,11 @@ public class CarDAO {
 
     {
         cars = new ArrayList<>();
-        cars.add(new Car(++CAR_COUNT, "LADA", "PRIORA"));
-        cars.add(new Car(++CAR_COUNT, "MOSKVICH", "412"));
-        cars.add(new Car(++CAR_COUNT, "NIVA", "CHEVROLET"));
-        cars.add(new Car(++CAR_COUNT, "IZH", "ODA"));
-        cars.add(new Car(++CAR_COUNT, "GAZ", "NEXT"));
+        cars.add(new Car(++CAR_COUNT, "Бмв", "х5"));
+        cars.add(new Car(++CAR_COUNT, "Опель", "Астра"));
+        cars.add(new Car(++CAR_COUNT, "Камри", "3.5"));
+        cars.add(new Car(++CAR_COUNT, "Лада", "Седан"));
+        cars.add(new Car(++CAR_COUNT, "Девятка", "Сиреневая"));
     }
 
     public List<Car> index(int count) {
